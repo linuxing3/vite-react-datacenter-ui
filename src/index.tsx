@@ -3,10 +3,11 @@ import dva from "dva";
 import { ConfigProvider } from "antd";
 import zhCN from "antd/lib/locale-provider/zh_CN";
 import App from "./routers";
-import model from "./model";
 import "./assets/init/normalize.css";
 import "./assets/less/index.less";
 import { createHashHistory } from "history";
+
+import model from "./model";
 
 //@ts-ignore
 let test = dva.default || dva;
@@ -17,7 +18,8 @@ const app = test({
 
 app.use({})
 
-app.model(model);
+app.model(model.user);
+app.model(model.order);
 
 app.router((obj: any) => (
   <ConfigProvider locale={zhCN}>

@@ -5,3 +5,7 @@ declare module '*.jpeg';
 declare module '*.gif';
 declare module '*.bmp';
 declare module '*.tiff';
+declare module 'onegraph-subscription-client';
+declare module 'onegraph-auth';
+declare module 'urql';
+// declare module 'react';
